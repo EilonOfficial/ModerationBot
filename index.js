@@ -84,5 +84,5 @@ if(commandIs('cyberdecider', message)){
 }
 
 });
-client.login('MzMwMTc5MzgwNjY2MDQwMzIw.DDg7-Q.LCeJ3WPDpVW6s_O1T0y1oo1mb3k')
+client.login('no')
 
