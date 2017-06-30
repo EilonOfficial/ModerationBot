@@ -3,8 +3,6 @@ const client = new Discord.Client
 const newUsers = new Discord.Collection();
 client.on('ready', () => { client.user.setGame('With Scammers') })
 var Memes = ["memes/meme1.gif","memes/meme3.gif","memes/meme4.jpg","memes/meme5.gif"];
-var Scams = ["syskey","SAM LOCK ROOL","ReimagePlus","eventvwr","dir /s","tree","hh h","hh microsoft","support.me","fastsupport.com","Go To Assist","Ammy Admin"];
-var Dice = ["<:diceface1:330090887273119745>","<:diceface2:330091146027991041>","<:diceface3:330091339825807363>","<:diceface4:330091474295455774>","<:diceface5:330091570000822284>","<:diceface6:330091695674753025>"];
 var Decider = ["Yes","No"];
 function pluck(array) {
     return array.map(function(item){ return item["name"];})
