@@ -1,7 +1,7 @@
 {
-  "mod_role_name" : "",
-  "admin_role_name" : "",
-  "prefix" : "",
+  "mod_role_name" : "MODERATOR",
+  "admin_role_name" : "ADMINISTRATOR",
+  "prefix" : "+",
   "no_perms" : "",
   "token" : "",
   "developers" : [
