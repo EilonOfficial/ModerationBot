@@ -1,0 +1,2 @@
+nodemon cyberbot.js 
+PAUSE
