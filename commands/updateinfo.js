@@ -3,7 +3,6 @@ exports.run = async function (bot, message) {
   "title": "Command Update",
   "description": "**Visit:** [Cyber Vision's Website](http://cybervision.ga) For More Info",
   "color": 6624759,
-  "timestamp": "2017-07-03T19:14:13.716Z",
   "footer": {
     "icon_url": "https://yt3.ggpht.com/-9OXsTEyJZl0/AAAAAAAAAAI/AAAAAAAAAAA/o4WiUor95z8/s900-c-k-no-mo-rj-c0xffffff/photo.jpg",
     "text": "CyberVision"
@@ -22,7 +21,7 @@ exports.run = async function (bot, message) {
   "fields": [
     {
       "name": "Added:",
-      "value": "-purge"
+      "value": "+submitcyberart **Permlvl:** **0** **|** **Usage:** `+submitcyberart [Link (Not File) ]`"
     },
     {
       "name": "Removed:",

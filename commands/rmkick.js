@@ -17,7 +17,6 @@ exports.run = async function (bot, message, args) {
 
   if(!found) return message.reply("No kick found with that kick ID.")
   if(perms < 20 && kicks[found].server.id !== message.guild.id) return message.reply("You can not do this as this kick was not issued in this server.")
-  message.channel.send(`Deleting the case of ${kicks[found].mention.name}\nReason: ${kicks[found].reason}\nServer: ${kicks[found].server.name}`)
   delete kicks[found]
   fs.writeFile("./data/kicks.json", JSON.stringify(kicks))
 }

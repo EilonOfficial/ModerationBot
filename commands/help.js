@@ -4,13 +4,14 @@ const embedcolors = require("../embedcolors.json");
 exports.run = async function(bot, message, args) {
   if (args.length < 1) {
     try {
+      message.channel.send(message.author.tag + " `I sent you a list of commands.`")
       let perms = bot.elevation(message)
       const commandArray = bot.commands.array();
       while (commandArray.length) {
         const embed = new Discord.RichEmbed();
         const commands = commandArray.splice(0, 25);
         const tcommands = commands.filter(c => c.config.permlevel <= perms && c.config.enabled === true)
-        embed.setColor('#00ffff')
+        embed.setColor(embedcolors.green_positive)
         embed.setTitle('Commands')
         embed.setDescription(`All available commands. Use ${config.prefix}help <command> for a detailed help. Message will be deleted over 30 minutes.`) // IN THE CORRECT PLACE
         for (const command of tcommands) {
@@ -40,7 +41,7 @@ exports.run = async function(bot, message, args) {
       const embed = new Discord.RichEmbed()
         .setTitle(`${command.help.name}`)
         .setDescription(`A detailed help for the command: ${command.help.name}`)
-        .setColor("#00ffff")
+        .setColor(embedcolors.green_positive)
         .addField("Name:", command.help.name)
         .addField("Description:", command.help.description)
         .addField("Usage:", config.prefix + command.help.usage)
@@ -69,9 +70,9 @@ exports.run = async function(bot, message, args) {
 
 exports.config = {
   enabled: true,
-  guildOnly: true,
+  guildOnly: false,
   permlevel: 0,
-  aliases: []
+  aliases: ["commands", "cmds", "cmd"]
 }
 
 exports.help = {

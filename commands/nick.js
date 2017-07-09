@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
-const nicks = require("../data/nicks.json");
+const nicks = require("C:/Users/NewPoof/Desktop/ModerationBot-master/data/nicks.json");
 const fs = require("fs");
 exports.run = async function (bot, message, args) {
-  if(message.guild.id === "294504904935079936") return;
+  if(!message.guild.id === "294504904935079936") return;
   let c = message.content
 let nick = c.split(" ").splice(1).join(" ")
 
@@ -42,7 +42,7 @@ nicks[caseid] = {
   },
   "nick": nick
 }
-fs.writeFile("../data/nicks.json", JSON.stringify(nicks))
+fs.writeFile("C:/Users/NewPoof/Desktop/ModerationBot-master/data/nicks.json", JSON.stringify(nicks))
 }
 
 exports.help = {

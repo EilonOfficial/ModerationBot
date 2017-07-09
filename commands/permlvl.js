@@ -13,5 +13,5 @@ exports.config = {
   enabled: true,
   guildOnly: true,
   permlevel: 0,
-  aliases: []
+  aliases: ["permlevel", "pmlvl", "pmlevel", "permissionlevel"]
 }

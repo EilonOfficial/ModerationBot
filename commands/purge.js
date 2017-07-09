@@ -16,12 +16,12 @@ exports.run = async function (bot, message) {
 exports.help = {
   name: "purge",
   description: "Deletes Messages",
-  usage: "+purge [Number Of Messages To Delete]"
+  usage: "purge [Number Of Messages To Delete]"
 } 
 
 exports.config = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: true,
   permlevel: 4, 
-  aliases: [] 
+  aliases: ["delete", "clean", "clear", "del", "clr", "cln"] 
 }
