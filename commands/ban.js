@@ -35,6 +35,7 @@ exports.run = async function (bot, message, args) {
   .addField("User:", mention.tag)
   .addField("Moderator:", message.author.tag)
   .addField("Reason:", reason)
+  .addField("Case ID:", caseid)
   message.guild.defaultChannel.send({embed: dcembed})
   const lcembed = new Discord.RichEmbed()
   .setTitle("Ban")
@@ -42,12 +43,14 @@ exports.run = async function (bot, message, args) {
   .addField("User:", mention.tag)
   .addField("Moderator:", message.author.tag)
   .addField("Reason:", reason)
+  .addField("Case ID:", caseid)
   bot.channels.get(log_channel.id).send({embed: lcembed})
   const urembed = new Discord.RichEmbed()
   .setTitle("Ban")
   .setColor(embedcolors.red)
   .addField("Moderator:", message.author.tag)
   .addField("Reason:", reason)
+  .addField("Case ID:", caseid)
   message.guild.member(mention).send({embed: urembed})
   message.guild.member(mention).ban(7)
   message.channel.send("User successfully banned.")
@@ -85,6 +88,6 @@ exports.help = {
 exports.config = {
   enabled: true,
   guildOnly: true,
-  permlevel: 4,
+  permlevel: 2,
   aliases: []
 }

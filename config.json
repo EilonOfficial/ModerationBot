@@ -1,14 +1,19 @@
 {
-  "mod_role_name" : "MODERATOR",
-  "admin_role_name" : "ADMINISTRATOR",
+  "mod_role_name" : "Moderator",
+  "admin_role_name" : "Administrators",
+  "helper_role_name" : "Helper",
   "prefix" : "+",
-  "no_perms" : "",
-  "token" : "",
+  "no_perms" : "```Sorry, but it seems that you do not have the right permissions to execute this command.```",
+  "token" : "MzMwMTc5MzgwNjY2MDQwMzIw.DDyFuQ.7nZQ_6R9UJZuvXGAzesG4XKJJBQ",
   "developers" : [
-    ""
+    "229232856063410176",
+    "227238361964871682",
+    "229232856063410176"
   ],
   "owners" : [
-    ""
+    "227238361964871682",
+    "229232856063410176",
+    "229232856063410176"
   ],
-  "creator" : ""
+  "creator" : "227238361964871682"
 }

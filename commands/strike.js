@@ -66,12 +66,12 @@ exports.run = async function (bot, message, args) {
     }
    const embed = new Discord.RichEmbed()
   .setAuthor(message.guild.member(message.mentions.users.first()).user.tag + " Has Been Striken")
-  .setColor(embedcolors.green_positive)
+  .setColor(embedcolors.yellow_warn)
   .addField("Moderator", message.author.tag)
   .addField("Reason", reason)
+  .addField("Case ID:", caseid)
 
   message.guild.channels.find("name", "logs").send({embed})
-  message.guild.channels.find("name", "staff-chat").send({embed})
   message.channel.send({embed})
 
     strikes[caseid] = {

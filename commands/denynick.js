@@ -1,4 +1,4 @@
-const nicks = require("C:/Users/NewPoof/Desktop/ModerationBot-master/data/nicks.json");
+const nicks = require("../nicks.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const embedcolors = require("../embedcolors.json")
@@ -41,7 +41,7 @@ exports.run = async function (bot, message, args) {
 
   message.guild.member(nicks[found].user.id).send({embed})
   delete nicks[found]
-  fs.writeFile("C:/Users/NewPoof/Desktop/ModerationBot-master/data/nicks.json", JSON.stringify(nicks))
+  fs.writeFile("../nicks.json", JSON.stringify(nicks))
 }
 
 exports.help = {

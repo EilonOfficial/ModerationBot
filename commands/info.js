@@ -1,4 +1,5 @@
 exports.run = async function (bot, message) {
+   const embedcolors = require("../embedcolors.json")
    const Discord = require('discord.js');
    const args = message.content.split(/\s+/g).slice(1);
    if(args.length < 1) message.channel.send('You Did Not Provide An Argument. **Usage:** `+info [@User]`')
@@ -119,7 +120,7 @@ function getstrikes(){
    const embed = new Discord.RichEmbed()
    .setTitle(DiscordUser + ":")
    .setThumbnail(avatar)
-   .setColor(444444)
+   .setColor(embedcolors.green_positive)
    .addField("Identifier:", Discriminator)
    .addField("Nickname", Nickname)
    .addField("User ID:", UserId)

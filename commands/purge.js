@@ -22,6 +22,6 @@ exports.help = {
 exports.config = {
   enabled: true,
   guildOnly: true,
-  permlevel: 4, 
+  permlevel: 2, 
   aliases: ["delete", "clean", "clear", "del", "clr", "cln"] 
 }

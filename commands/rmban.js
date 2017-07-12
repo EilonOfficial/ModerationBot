@@ -17,7 +17,7 @@ exports.run = async function (bot, message, args) {
 
   if(!found) return message.reply("No ban found with that ban ID.")
   if(perms < 20 && bans[found].server.id !== message.guild.id) return message.reply("You can not do this as this ban was not issued in this server.")
-  message.channel.send(`Deleting the case of ${bans[found].mention.name}\nReason: ${bans[found].reason}\nServer: ${bans[found].server.name}`)
+  message.channel.send(`Ban Deleted`)
   delete bans[found]
   fs.writeFile("./data/bans.json", JSON.stringify(bans))
 }
