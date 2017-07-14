@@ -11,6 +11,7 @@ exports.run = async function (bot, message) {
           errors: ['time'],
       }).then((collected) => {
         try {
+          var usertag = message.author
           message.channel.send('Your CyberArt Has Been Submitted.')
           message.guild.channels.find("name", "cyberart-submissions").send(result).then(function (message) {
           message.react("👍")

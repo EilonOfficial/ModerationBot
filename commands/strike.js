@@ -6,7 +6,7 @@ exports.run = async function (bot, message, args) {
     if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) return message.reply("I do not have the correct permissions to do this.")
   let mention = message.mentions.users.first()
   let reason = args.slice(1).join(" ")
-  let log_channel = message.guild.channels.find("name", "mod-logs");
+  let log_channel = message.guild.channels.find("name", "logs");
   if(!log_channel) {
     if(!message.guild.member(bot.user).hasPermission("MANAGE_CHANNELS")) return message.reply("there is not a `mod-logs` channel.")
     message.guild.createChannel({name: "mod-logs", type: "text"})

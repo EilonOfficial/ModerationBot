@@ -2,6 +2,7 @@ const strikes = require("../data/strikes.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 exports.run = async function (bot, message, args) {
+  if(!message.author.id === "169122094582464512"){
   let perms = bot.elevation(message)
   let pid = args.slice(0).join(" ");
   if(pid.length < 1) return message.reply("Please provide a strike ID to remove.")
@@ -21,7 +22,7 @@ exports.run = async function (bot, message, args) {
   delete strikes[found]
   fs.writeFile("./data/strikes.json", JSON.stringify(strikes))
 }
-
+}
 exports.help = {
   name: "rmstrike",
   description: "Delete a strike with the ID.",

@@ -3,7 +3,7 @@ exports.run = async function (bot, message) {
      const embedcolors = require("../embedcolors.json");
      const args = message.content.split(/\s+/g).slice(1);
     if(args.length < 4){
-        message.channel.send('Invalid Arguments.')
+        message.channel.send('Invalid Arguments. Usage: **+addnumber [Number (Must Not Contain Spaces) ] | [Website (Must Not Contain Spaces) ] | [Description (May Contain Spaces) ]**')
     } else {
       if(args.length === 5){
       var Number = args[0]

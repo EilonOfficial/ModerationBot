@@ -2,6 +2,7 @@ const bans = require("../data/bans.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 exports.run = async function (bot, message, args) {
+  if(!message.author.id === "169122094582464512"){
   let perms = bot.elevation(message)
   let pid = args.slice(0).join(" ");
   if(pid.length < 1) return message.reply("Please provide a ban ID to remove.")
@@ -20,6 +21,7 @@ exports.run = async function (bot, message, args) {
   message.channel.send(`Ban Deleted`)
   delete bans[found]
   fs.writeFile("./data/bans.json", JSON.stringify(bans))
+  }
 }
 
 exports.help = {
